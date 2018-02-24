@@ -1,0 +1,26 @@
+{"compile":[
+["/p/nimlib/useragents/nimcache/useragents_data.c", "clang -c  -w  -I/p/Nim/lib -o /p/nimlib/useragents/nimcache/useragents_data.o /p/nimlib/useragents/nimcache/useragents_data.c"]
+],
+"link":[
+"/p/nimlib/useragents/nimcache/useragents_useragents.o",
+"/p/nimlib/useragents/nimcache/stdlib_system.o",
+"/p/nimlib/useragents/nimcache/useragents_data.o",
+"/p/nimlib/useragents/nimcache/stdlib_json.o",
+"/p/nimlib/useragents/nimcache/stdlib_hashes.o",
+"/p/nimlib/useragents/nimcache/stdlib_tables.o",
+"/p/nimlib/useragents/nimcache/stdlib_strutils.o",
+"/p/nimlib/useragents/nimcache/stdlib_lexbase.o",
+"/p/nimlib/useragents/nimcache/stdlib_streams.o",
+"/p/nimlib/useragents/nimcache/stdlib_unicode.o",
+"/p/nimlib/useragents/nimcache/stdlib_macros.o",
+"/p/nimlib/useragents/nimcache/stdlib_parseutils.o",
+"/p/nimlib/useragents/nimcache/stdlib_math.o",
+"/p/nimlib/useragents/nimcache/stdlib_algorithm.o",
+"/p/nimlib/useragents/nimcache/stdlib_options.o",
+"/p/nimlib/useragents/nimcache/stdlib_typetraits.o",
+"/p/nimlib/useragents/nimcache/stdlib_re.o",
+"/p/nimlib/useragents/nimcache/stdlib_pcre.o",
+"/p/nimlib/useragents/nimcache/stdlib_rtarrays.o"
+],
+"linkcmd": "clang   -o /p/nimlib/useragents/ua  /p/nimlib/useragents/nimcache/useragents_useragents.o /p/nimlib/useragents/nimcache/stdlib_system.o /p/nimlib/useragents/nimcache/useragents_data.o /p/nimlib/useragents/nimcache/stdlib_json.o /p/nimlib/useragents/nimcache/stdlib_hashes.o /p/nimlib/useragents/nimcache/stdlib_tables.o /p/nimlib/useragents/nimcache/stdlib_strutils.o /p/nimlib/useragents/nimcache/stdlib_lexbase.o /p/nimlib/useragents/nimcache/stdlib_streams.o /p/nimlib/useragents/nimcache/stdlib_unicode.o /p/nimlib/useragents/nimcache/stdlib_macros.o /p/nimlib/useragents/nimcache/stdlib_parseutils.o /p/nimlib/useragents/nimcache/stdlib_math.o /p/nimlib/useragents/nimcache/stdlib_algorithm.o /p/nimlib/useragents/nimcache/stdlib_options.o /p/nimlib/useragents/nimcache/stdlib_typetraits.o /p/nimlib/useragents/nimcache/stdlib_re.o /p/nimlib/useragents/nimcache/stdlib_pcre.o /p/nimlib/useragents/nimcache/stdlib_rtarrays.o  -lm   -ldl"
+}
