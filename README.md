@@ -1,4 +1,4 @@
-User Agent parser for nim.
+Useragent parser for nim.
 ==========================
 
 Module provides just one function to parse a user agent:
