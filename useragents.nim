@@ -44,7 +44,7 @@ proc replaceMatches(s: string, matches: array[5, string]): string =
     if c == '$':
       var which = ord(s[i+1]) - ord('1')
       assert which >= 0 and which < matches.len
-      if matches[which] != nil:
+      if matches[which] != "":
         result &= matches[which]
       inc i
     else:
@@ -68,25 +68,20 @@ proc parseUserAgent*(userAgent: string): UserAgent =
     if bounds.first != -1:
       if entry.family_replacement != "":
         result.browserName = entry.family_replacement.replace("$1", matches[0])
-      elif matches[0] != nil:
+      else:
         result.browserName = matches[0]
 
       if entry.v1_replacement != "":
         result.browserMajorVersion = entry.v1_replacement
-      elif matches[1] != nil:
+      else:
         result.browserMajorVersion = matches[1]
 
       if entry.v2_replacement != "":
         result.browserMinorVersion = entry.v2_replacement
-      elif matches[2] != nil:
+      else:
         result.browserMinorVersion = matches[2]
-
-      if matches[3] != nil:
-        result.browserPatchVersion = matches[3]
-
-      if matches[4] != nil:
-        result.browserPatchMinorVersion = matches[4]
-
+      result.browserPatchVersion = matches[3]
+      result.browserPatchMinorVersion = matches[4]
       break
 
   result.osName = "Other"
@@ -101,26 +96,25 @@ proc parseUserAgent*(userAgent: string): UserAgent =
     if bounds.first != -1:
       if entry.os_replacement != "":
         result.osName = entry.os_replacement.replace("$1", matches[0])
-      elif matches[0] != nil:
+      else:
         result.osName = matches[0]
 
       if entry.os_v1_replacement != "":
         result.osMajorVersion = entry.os_v1_replacement
-      elif matches[1] != nil:
+      else:
         result.osMajorVersion = matches[1]
 
       if entry.os_v2_replacement != "":
         result.osMinorVersion = entry.os_v2_replacement
-      elif matches[2] != nil:
+      else:
         result.osMinorVersion = matches[2]
 
       if entry.os_v3_replacement != "":
         result.osPatchVersion = entry.os_v3_replacement
-      elif matches[3] != nil:
+      else:
         result.osPatchVersion = matches[3]
 
-      if matches[4] != nil:
-        result.osPatchMinorVersion = matches[4]
+      result.osPatchMinorVersion = matches[4]
 
       break
 
@@ -136,7 +130,7 @@ proc parseUserAgent*(userAgent: string): UserAgent =
 
       if entry.device_replacement != "":
         result.deviceName = replaceMatches(entry.device_replacement, matches)
-      elif matches[0] != nil:
+      else:
         result.deviceName = matches[0]
       result.deviceName = result.deviceName.strip()
 
@@ -146,7 +140,7 @@ proc parseUserAgent*(userAgent: string): UserAgent =
 
       if entry.model_replacement != "":
         result.deviceModel = replaceMatches(entry.model_replacement, matches)
-      elif matches[0] != nil:
+      else:
         result.deviceModel = matches[0]
       result.deviceModel = result.deviceModel.strip()
 
