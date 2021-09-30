@@ -1,9 +1,18 @@
-Useragent parser for nim.
-==========================
+# Useragent parser for nim.
+
+`nimble install useragents`
+
+![Github Actions](https://github.com/treeform/useragents/workflows/Github%20Actions/badge.svg)
+
+[API reference](https://nimdocs.com/treeform/useragents)
+
+This library has no dependencies other than the Nim standard libarary.
+
+## About
 
 Module provides just one function to parse a user agent:
 
-```lang:nim
+```nim
 import useragents
 echo parseUserAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36")
 
